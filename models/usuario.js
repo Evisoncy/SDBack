@@ -23,7 +23,7 @@ const UsuarioSchema = Schema({
     },
     rol:{
         type: String,
-        required: true
+        required: false
     },
     fichaMedica: [{
         ref: "FichaMedica",

@@ -3,8 +3,36 @@ const Usuario = require("../models/usuario");
 
 
 exports.crearFicha = async (req, res) => {
+    /*const { diagnostico, tipoSangre, medicamentoHabitual, medicamentoAlergico,seguroMedico,anio, correo } = req.body;
 
-    try {
+    const formficha = new Ficha({
+        diagnostico,
+        tipoSangre,
+        medicamentoHabitual,
+        medicamentoAlergico,
+        seguroMedico,
+        anio
+    });
+  
+    const usuario = await Usuario.findOne({ correo });
+  
+    if (!usuario) {
+      return res
+        .status(400)
+        .json({ message: `${correo} no está registrado en la Base de Datos` });
+    }
+  
+    const ficha = await formficha.save();
+  
+    usuario.fichaMedica.push(ficha);
+    const sv_usuario = await usuario.save();
+  
+    res.status(200).json({
+      error: false,
+      message: "La Ficha fue creada correctamente",
+      sv_usuario,
+    });*/
+   try {
         let ficha;  
       
         ficha = new Ficha(req.body);

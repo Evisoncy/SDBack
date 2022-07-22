@@ -26,6 +26,9 @@ const fichaSchema = new Schema({
     },
     anio:{
         type:Number
+    },
+    discapacidad:{
+        type: String
     }
     
 })
