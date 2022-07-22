@@ -16,7 +16,8 @@ app.use('/api/ficha', require('./routes/ficha'));
 app.use('/api/rol', require('./routes/rol'));
 app.use('/api/discapacidad', require('./routes/discapacidad'))
 
-const PORT = process.env.PORT || 3000;
+
+const PORT=process.env.PORT || 4000;
 app.listen(PORT, () => {
-    console.log('El servidor esta corriendo perfectamente en el puerto',PORT)
+    console.log('El servidor esta corriendo perfectamente',PORT)
 })
