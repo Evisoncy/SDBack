@@ -12,7 +12,11 @@ app.use(cors())
 app.use(express.json());
 
 app.use('/api/usuarios', require('./routes/usuario'));
+app.use('/api/ficha', require('./routes/ficha'));
+app.use('/api/rol', require('./routes/rol'));
+app.use('/api/discapacidad', require('./routes/discapacidad'))
 
-app.listen(4000, () => {
-    console.log('El servidor esta corriendo perfectamente')
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+    console.log('El servidor esta corriendo perfectamente en el puerto',PORT)
 })
