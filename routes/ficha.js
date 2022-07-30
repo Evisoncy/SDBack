@@ -7,4 +7,5 @@ const fichaController = require('../controllers/FichaMedica');
 router.post('/', fichaController.crearFicha);
 router.get('/', fichaController.obtenerfichas);
 router.get('/:id', fichaController.obtenerficha);
+//router.post('/:id',fichaController.crearF)
 module.exports = router;
