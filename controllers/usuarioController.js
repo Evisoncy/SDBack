@@ -36,7 +36,7 @@ exports.obtenerUsuarios = async (req, res) => {
 exports.actualizarUsuario = async (req, res) => {
 
     try {
-        const { nombres, apellidos, codigo, correo, telefono } = req.body;
+        const { nombres, apellidos, codigo, correo, telefono, rol, dni, sexo } = req.body;
         let usuario = await Usuario.findById(req.params.id);
 
         if(!usuario) {
@@ -48,6 +48,10 @@ exports.actualizarUsuario = async (req, res) => {
         usuario.codigo = codigo;
         usuario.correo = correo;
         usuario.telefono = telefono;
+        usuario.rol = rol;
+        usuario.dni = dni;
+        usuario.sexo = sexo;
+
 
         usuario = await Usuario.findOneAndUpdate({ _id: req.params.id },usuario, { new: true} )
         res.json(usuario);

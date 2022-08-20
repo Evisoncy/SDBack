@@ -32,7 +32,15 @@ const UsuarioSchema = Schema({
     incidencia: [{
         ref: "Incidencia",
         type: Schema.Types.ObjectId
-    }]
+    }],
+    dni:{
+        type:String,
+        required:false
+    },
+    sexo: {
+        type:String,
+        required:false
+    }
 });
 
 module.exports = model('Usuario', UsuarioSchema);
